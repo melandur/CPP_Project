@@ -51,7 +51,7 @@ void OpenCV::frameBuffer(cv::VideoCapture cap)
 cv::Mat OpenCV::getFrameColor()
 {
     cv::Mat output = get();
-    cv::cvtColor(output, output, CV_BGR2RGB);
+    cv::cvtColor(output, output, cv::COLOR_BGR2RGB);
     cv::resize(output, output, cv::Size(800,600));
     return output;
 }
